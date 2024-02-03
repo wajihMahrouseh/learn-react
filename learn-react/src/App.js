@@ -7,7 +7,7 @@ function App() {
         <h1>Learn React</h1>
         <div>
           <h2>My Todo</h2>
-          <Todo />
+          <Todo text="learn react" />
         </div>
       </header>
     </div>
