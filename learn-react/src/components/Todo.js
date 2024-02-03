@@ -1,6 +1,21 @@
+import { useState } from 'react';
+import Modal from './Modal'
+import BackDrop from './BackDrop'
+
 function Todo(props) {
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+
     function deleteHandler() {
         console.log('Clicked!')
+        setModalIsOpen(true);
+    }
+
+    function closeModalHandler() {
+        setModalIsOpen(false);
+    }
+
+    function confirmModalHandler() {
+        setModalIsOpen(false);
     }
 
     return (
@@ -11,6 +26,8 @@ function Todo(props) {
                 {/* <button onClick={() => { }}>Delete</button> */}
                 {/* <button onClick={function () { }}>Delete</button> */}
             </div>
+            {modalIsOpen && <Modal onCancel={closeModalHandler} onConfirm={confirmModalHandler} />}
+            {modalIsOpen && <BackDrop onCancel={closeModalHandler} />}
         </div >
     );
 }
