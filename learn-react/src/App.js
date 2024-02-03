@@ -1,4 +1,4 @@
-import './App.css';
+import Todo from './components/Todo'
 
 function App() {
   return (
@@ -6,13 +6,8 @@ function App() {
       <header className="App-header">
         <h1>Learn React</h1>
         <div>
-          <h2>My Todos</h2>
-          <div>
-            <h3>TITLE</h3>
-            <div>
-              <button>Delete</button>
-            </div>
-          </div>
+          <h2>My Todo</h2>
+          <Todo />
         </div>
       </header>
     </div>
